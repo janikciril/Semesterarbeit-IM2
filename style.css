@@ -19,38 +19,49 @@ body {
     position: relative;
   }
   
-  .arrow {
-    width: 0;
-    height: 0;
-    border-left: 75px solid transparent;
-    border-right: 75px solid transparent;
-    border-bottom: 60px solid #00c853;
+  .house {
+    width: 120px;
     margin: 0 auto 20px auto;
-    position: relative;
   }
   
-  .arrow::after {
-    content: "105";
-    color: #000;
-    font-size: 24px;
+  .roof {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 40px solid #00c853;
+    margin: 0 auto;
+  }
+  
+  .body {
+    background-color: #00c853;
+    width: 120px;
+    height: 80px;
+    position: relative;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .count {
+    font-size: 28px;
+    color: white;
     font-weight: bold;
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
   }
   
   .free-text {
-    color: #000;
-    font-size: 18px;
-    margin-bottom: 10px;
+    color: white;
+    font-size: 16px;
   }
   
   .free-text span {
-    background: #00c853;
-    color: #fff;
+    background: white;
+    color: #00c853;
     padding: 2px 6px;
     border-radius: 5px;
+    margin-left: 5px;
   }
   
   .buttons {
