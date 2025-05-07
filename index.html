@@ -7,14 +7,41 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="display-box">
-    <div class="arrow"></div>
-    <div class="free-text">FREE <span>P</span></div>
-    <div class="buttons">
-      <button>Bahnhof</button>
-      <button>Manor</button>
-      <button>Neumarkt</button>
+  <div class="container">
+    <div class="display-box" id="bahnhof-box">
+      <div class="house">
+        <div class="roof"></div>
+        <div class="body">
+          <div class="count" id="bahnhof-count">–</div>
+          <div class="free-text">FREE <span>P</span></div>
+        </div>
+      </div>
+      <p>Bahnhof</p>
+    </div>
+
+    <div class="display-box" id="manor-box">
+      <div class="house">
+        <div class="roof"></div>
+        <div class="body">
+          <div class="count" id="manor-count">–</div>
+          <div class="free-text">FREE <span>P</span></div>
+        </div>
+      </div>
+      <p>Manor</p>
+    </div>
+
+    <div class="display-box" id="neumarkt-box">
+      <div class="house">
+        <div class="roof"></div>
+        <div class="body">
+          <div class="count" id="neumarkt-count">–</div>
+          <div class="free-text">FREE <span>P</span></div>
+        </div>
+      </div>
+      <p>Neumarkt</p>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
