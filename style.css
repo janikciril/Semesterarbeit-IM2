@@ -37,13 +37,13 @@ body {
   height: 0;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
-  border-bottom: 100px solid var(--roof-color, green); /* Dachfarbe, variabel */
+  border-bottom: 100px solid #20CA10; /* Dachfarbe, variabel */
 }
 
 .walls {
   width: 200px;
   height: 160px;
-  background-color: var(--roof-color, green);
+  background-color: #20CA10;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,3 +95,15 @@ body {
 .button:hover {
   background-color: #0056b3; /* Helleres Blau bei Hover */
 }
+
+.house.green .roof, .house.green .walls {
+background-color: #20CA10;
+}
+
+.house.orange .roof, .house.orange .walls {
+  background-color: #FDB100;
+  }
+
+.house.red .roof, .house.red .walls {
+    background-color: #FA0505;
+    }

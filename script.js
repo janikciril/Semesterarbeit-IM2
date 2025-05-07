@@ -2,6 +2,7 @@
   const parkingNumber = document.getElementById("parking-number");
   const roof = document.querySelector(".roof");
   const walls = document.querySelector(".walls");
+  const house = document.querySelector(".house");
 
   buttons.forEach((button) => {
     button.addEventListener("click", async () => {
@@ -18,26 +19,7 @@
       );
       const data = await response.json();
       return data;
-      // if (record && record.fields.free_spaces !== undefined && record.fields.max_capacity !== undefined) {
-      //   const free = record.fields.free_spaces;
-      //   const capacity = record.fields.max_capacity;
-      //   const occupancy = 100 - (free / capacity) * 100;
 
-      //   parkingNumber.textContent = free;
-
-      //   // Farbe basierend auf Auslastung
-      //   if (occupancy <= 20) {
-      //     setColors("green");
-      //   } else if (occupancy <= 60) {
-      //     setColors("orange");
-      //   } else {
-      //     setColors("red");
-      //   }
-      // } else {
-      //   parkingNumber.textContent = "N/A";
-      //   console.warn(`Parkhaus "${parkingName}" nicht gefunden oder unvollständige Daten.`);
-      //   setColors("gray");
-      // }
     } catch (error) {
       console.error("Fehler beim Abrufen der Daten:", error);
       return [];
@@ -47,13 +29,36 @@
   }
 
   function showData(parkingData) {
-    console.log(parkingData.results[0].shortfree);
-    const container = document.querySelector("#number").value 
+    const freeSpaces = parkingData.results[0].shortfree; 
+    const occupancy = parkingData.results[0].belegung_prozent; // z. B. 73.5 (%)
+    console.log(occupancy);
+
+    parkingNumber.textContent = freeSpaces;    
+    setHouseColorByOccupancy(occupancy); // neue Version nutzt nur die Zahl
+    //console.log(freeSpaces);
   }
 
-
-
-  function setColors(color) {
-    roof.style.borderBottomColor = color;
-    walls.style.backgroundColor = color;
+  function setHouseColorByOccupancy(belegung_prozent) {
+ 
+    if (belegung_prozent <= 20) {
+      //color = "#FA0505"; // rot
+      house.classList.remove("orange");
+      house.classList.remove("green");
+      house.classList.add("red");
+    } else if (belegung_prozent <= 60) {
+      //color = "#FDB100"; // orange
+      house.classList.add("orange");
+      house.classList.remove("green");
+      house.classList.remove("red");
+    } else {
+      //color = "#20CA10"; // grün
+      house.classList.remove("orange");
+      house.classList.add("green");
+      house.classList.remove("red");
+    }
+  
   }
+  
+
+
+       
