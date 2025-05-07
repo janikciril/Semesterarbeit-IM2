@@ -1,38 +1,56 @@
-// Parkhäuser, die angezeigt werden sollen
-const parkhausNamen = ['P21 Neumarkt', 'P22 Rathaus', 'P42 Burggraben'];
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".button");
+  const parkingNumber = document.getElementById("parking-number");
+  const roof = document.querySelector(".roof");
+  const walls = document.querySelector(".walls");
 
-// IDs in HTML entsprechend formatieren
-function nameZuId(name) {
-  return name.toLowerCase().replace(/\s+/g, '');
-}
-
-// Lade und zeige Live-Daten an
-async function ladeParkplatzDaten() {
-  try {
-    const response = await fetch(
-      'https://daten.stadt.sg.ch/api/explore/v2.1/catalog/datasets/freie-parkplatze-in-der-stadt-stgallen-pls/records?limit=100'
-    );
-    const data = await response.json();
-
-    parkhausNamen.forEach(name => {
-      const eintrag = data.results.find(e => e.phname === name);
-      if (eintrag) {
-        const id = nameZuId(name);
-        const element = document.querySelector(`#${id} .free-spots`);
-        if (element) {
-          element.textContent = eintrag.freieanzahlparkplatze;
-        }
-      }
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const parkingName = button.getAttribute("data-parking");
+      fetchParkingData(parkingName);
     });
-  } catch (error) {
-    console.error('Fehler beim Laden der Parkplatzdaten:', error);
+  });
+
+  async function fetchParkingData(parkingName) {
+    try {
+      const response = await fetch(
+        "https://daten.stadt.sg.ch/api/explore/v2.1/catalog/datasets/freie-parkplatze-in-der-stadt-stgallen-pls/records?limit=100"
+      );
+      const data = await response.json();
+
+      const record = data.results.find((item) =>
+        item.fields.name.toLowerCase().includes(parkingName.toLowerCase())
+      );
+
+      if (record && record.fields.free_spaces !== undefined && record.fields.max_capacity !== undefined) {
+        const free = record.fields.free_spaces;
+        const capacity = record.fields.max_capacity;
+        const occupancy = 100 - (free / capacity) * 100;
+
+        parkingNumber.textContent = free;
+
+        // Farbe basierend auf Auslastung
+        if (occupancy <= 20) {
+          setColors("green");
+        } else if (occupancy <= 60) {
+          setColors("orange");
+        } else {
+          setColors("red");
+        }
+      } else {
+        parkingNumber.textContent = "N/A";
+        console.warn(`Parkhaus "${parkingName}" nicht gefunden oder unvollständige Daten.`);
+        setColors("gray");
+      }
+    } catch (error) {
+      console.error("Fehler beim Abrufen der Daten:", error);
+      parkingNumber.textContent = "Fehler";
+      setColors("gray");
+    }
   }
-}
 
-// Beim Laden der Seite ausführen
-document.addEventListener('DOMContentLoaded', () => {
-  ladeParkplatzDaten();
-
-  // Optional: alle 5 Minuten aktualisieren
-  setInterval(ladeParkplatzDaten, 300000); // 300.000 ms = 5 Minuten
+  function setColors(color) {
+    roof.style.borderBottomColor = color;
+    walls.style.backgroundColor = color;
+  }
 });

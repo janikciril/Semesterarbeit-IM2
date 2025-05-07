@@ -3,28 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meine Website</title>
+  <title>Parkplatzanzeige St. Gallen</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  
-  <!-- Graue Fläche in der Mitte -->
   <div class="centered-box">
-    <!-- Haus mit Text und Zahl -->
     <div class="house">
       <div class="roof"></div>
       <div class="walls">
-        <div class="number">42</div>
+        <div class="number" id="parking-number">--</div>
         <div class="text">Freie Parkplätze</div>
       </div>
     </div>
-    
-    <!-- Buttons unterhalb des Hauses -->
     <div class="buttons">
-      <button class="button">Bahnhof</button>
-      <button class="button">Manor</button>
-      <button class="button">Neumarkt</button>
+      <button class="button" data-parking="Bahnhof">Bahnhof</button>
+      <button class="button" data-parking="Manor">Manor</button>
+      <button class="button" data-parking="Neumarkt">Neumarkt</button>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
