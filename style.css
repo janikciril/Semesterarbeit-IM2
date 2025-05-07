@@ -1,69 +1,59 @@
+/* Grundlegende Stile */
 body {
-  background: url('your-image-path.jpg') no-repeat center center/cover;
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f0f4f8;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  height: 100vh;
-  flex-wrap: wrap;
-}
-
-.display-box {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 15px;
+header, footer {
+  background-color: #2c3e50;
+  color: white;
   text-align: center;
-  width: 200px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 1rem;
 }
 
-.house {
-  width: 100px;
-  margin: 0 auto 10px auto;
-}
-
-.roof {
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 30px solid #ccc;
-  margin: 0 auto;
-}
-
-.body {
-  background-color: #ccc;
-  width: 100px;
-  height: 70px;
-  border-radius: 0 0 8px 8px;
+.parking-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  transition: background-color 0.3s ease;
+  padding: 2rem;
+  gap: 1.5rem;
 }
 
-.count {
-  font-size: 24px;
-  color: white;
-  font-weight: bold;
+.parking-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.2s ease;
 }
 
-.free-text {
-  color: white;
-  font-size: 14px;
+.parking-card:hover {
+  transform: scale(1.03);
 }
 
-.free-text span {
-  background: white;
-  color: #00c853;
-  padding: 2px 5px;
-  border-radius: 5px;
-  margin-left: 5px;
+.parking-card h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #34495e;
+}
+
+.parking-card p {
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .parking-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .parking-card {
+    width: 90%;
+  }
 }

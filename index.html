@@ -1,46 +1,36 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parkhaus Anzeige</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parking SG</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="display-box" id="bahnhof-box">
-      <div class="house">
-        <div class="roof"></div>
-        <div class="body">
-          <div class="count" id="bahnhof-count">–</div>
-          <div class="free-text">FREE <span>P</span></div>
-        </div>
-      </div>
-      <p>Bahnhof</p>
-    </div>
+  <header>
+    <h1>Parking SG</h1>
+  </header>
 
-    <div class="display-box" id="manor-box">
-      <div class="house">
-        <div class="roof"></div>
-        <div class="body">
-          <div class="count" id="manor-count">–</div>
-          <div class="free-text">FREE <span>P</span></div>
-        </div>
+  <main>
+    <section class="parking-list">
+      <div class="parking-card" id="p21neumarkt">
+        <h2>P21 Neumarkt</h2>
+        <p>Freie Plätze: <span class="free-spots">–</span></p>
       </div>
-      <p>Manor</p>
-    </div>
+      <div class="parking-card" id="p22rathaus">
+        <h2>P22 Rathaus</h2>
+        <p>Freie Plätze: <span class="free-spots">–</span></p>
+      </div>
+      <div class="parking-card" id="p42burggraben">
+        <h2>P42 Burggraben</h2>
+        <p>Freie Plätze: <span class="free-spots">–</span></p>
+      </div>
+    </section>
+  </main>
 
-    <div class="display-box" id="neumarkt-box">
-      <div class="house">
-        <div class="roof"></div>
-        <div class="body">
-          <div class="count" id="neumarkt-count">–</div>
-          <div class="free-text">FREE <span>P</span></div>
-        </div>
-      </div>
-      <p>Neumarkt</p>
-    </div>
-  </div>
+  <footer>
+    <p>© 2025 Parking SG</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

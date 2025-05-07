@@ -1,44 +1,38 @@
-const PARKHAUSER = [
-  { name: "Bahnhof", countId: "bahnhof-count", boxId: "bahnhof-box" },
-  { name: "Manor", countId: "manor-count", boxId: "manor-box" },
-  { name: "Neumarkt", countId: "neumarkt-count", boxId: "neumarkt-box" }
-];
+// Parkhäuser, die angezeigt werden sollen
+const parkhausNamen = ['P21 Neumarkt', 'P22 Rathaus', 'P42 Burggraben'];
 
-async function fetchParkingData() {
+// IDs in HTML entsprechend formatieren
+function nameZuId(name) {
+  return name.toLowerCase().replace(/\s+/g, '');
+}
+
+// Lade und zeige Live-Daten an
+async function ladeParkplatzDaten() {
   try {
-    const response = await fetch('https://daten.stadt.sg.ch/api/explore/v2.1/catalog/datasets/freie-parkplatze-in-der-stadt-stgallen-pls/records?limit=50');
+    const response = await fetch(
+      'https://daten.stadt.sg.ch/api/explore/v2.1/catalog/datasets/freie-parkplatze-in-der-stadt-stgallen-pls/records?limit=100'
+    );
     const data = await response.json();
 
-    PARKHAUSER.forEach(({ name, countId, boxId }) => {
-      const record = data.results.find(item => item.fields.phname === name);
-      if (record) {
-        const frei = record.fields.free;
-        const gesamt = record.fields.max;
-        const prozent = Math.round((frei / gesamt) * 100);
-
-        document.getElementById(countId).textContent = frei;
-
-        const color = getColorForCapacity(prozent);
-        const houseBody = document.querySelector(`#${boxId} .body`);
-        houseBody.style.backgroundColor = color;
-      } else {
-        document.getElementById(countId).textContent = "N/A";
+    parkhausNamen.forEach(name => {
+      const eintrag = data.results.find(e => e.phname === name);
+      if (eintrag) {
+        const id = nameZuId(name);
+        const element = document.querySelector(`#${id} .free-spots`);
+        if (element) {
+          element.textContent = eintrag.freieanzahlparkplatze;
+        }
       }
     });
-
   } catch (error) {
-    console.error("Fehler beim Abrufen:", error);
-    PARKHAUSER.forEach(({ countId }) => {
-      document.getElementById(countId).textContent = "Fehler";
-    });
+    console.error('Fehler beim Laden der Parkplatzdaten:', error);
   }
 }
 
-function getColorForCapacity(percent) {
-  if (percent <= 20) return "#d32f2f";     // Rot
-  if (percent <= 60) return "#f9a825";     // Orange
-  return "#388e3c";                        // Grün
-}
+// Beim Laden der Seite ausführen
+document.addEventListener('DOMContentLoaded', () => {
+  ladeParkplatzDaten();
 
-fetchParkingData();
-setInterval(fetchParkingData, 60000);
+  // Optional: alle 5 Minuten aktualisieren
+  setInterval(ladeParkplatzDaten, 300000); // 300.000 ms = 5 Minuten
+});
