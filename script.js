@@ -41,20 +41,20 @@
   function setHouseColorByOccupancy(belegung_prozent) {
  
     if (belegung_prozent <= 20) {
-      //color = "#FA0505"; // rot
+      //color = "#FA0505"; // grün
       house.classList.remove("orange");
-      house.classList.remove("green");
-      house.classList.add("red");
-    } else if (belegung_prozent <= 60) {
+      house.classList.remove("red");
+      house.classList.add("green");
+    } else if (belegung_prozent <= 80) {
       //color = "#FDB100"; // orange
       house.classList.add("orange");
       house.classList.remove("green");
       house.classList.remove("red");
     } else {
-      //color = "#20CA10"; // grün
+      //color = "#20CA10"; // rot
       house.classList.remove("orange");
-      house.classList.add("green");
-      house.classList.remove("red");
+      house.classList.add("red");
+      house.classList.remove("green");
     }
   
   }

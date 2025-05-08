@@ -1,5 +1,24 @@
 /* style.css */
 
+:root {
+  --col-orange: #FDB100;
+  --border-orange: 100px solid var(--col-orange);
+  --col-green: #20CA10;
+  --border-green: 100px solid var(--col-green);
+  --col-red: #FA0505;
+  --border-red: 100px solid var(--col-red);
+}
+
+.header-title {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 36px;
+  color: white;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -96,14 +115,26 @@ body {
   background-color: #0056b3; /* Helleres Blau bei Hover */
 }
 
-.house.green .roof, .house.green .walls {
-background-color: #20CA10;
+.house.green .walls {
+background-color: var(--col-green);
 }
 
-.house.orange .roof, .house.orange .walls {
-  background-color: #FDB100;
-  }
+.house.green .roof {
+  border-bottom: var(--border-green); /* Dachfarbe, variabel */
+}
 
-.house.red .roof, .house.red .walls {
-    background-color: #FA0505;
-    }
+.house.orange .walls {
+  background-color: var(--col-orange);
+}
+
+.house.orange .roof {
+  border-bottom: var(--border-orange);
+}
+
+.house.red .walls {
+  background-color: var(--col-red);
+}
+
+.house.red .roof {
+  border-bottom: var(--border-red);
+}
