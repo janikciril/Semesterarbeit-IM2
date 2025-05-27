@@ -4,6 +4,19 @@
   const walls = document.querySelector(".walls");
   const house = document.querySelector(".house");
 
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Alle Buttons zuerst "deaktivieren"
+      buttons.forEach(btn => btn.classList.remove('active'));
+  
+      // Geklickten Button aktiv setzen
+      button.classList.add('active');
+  
+      // Optional: hier kannst du zusätzlich deine Parkplatzdaten aktualisieren
+      // z.B. fetchParkhausDaten(button.dataset.parking);
+    });
+  });
+
   buttons.forEach((button) => {
     button.addEventListener("click", async () => {
       const parkingName = button.getAttribute("data-parking");
@@ -58,6 +71,10 @@
     }
   
   }
+
+  
+
+
   
 
 

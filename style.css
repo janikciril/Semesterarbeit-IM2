@@ -9,20 +9,35 @@
   --border-red: 100px solid var(--col-red);
 }
 
-.header-title {
-  position: absolute;
-  top: 90px;
+/*.header-title {
+  position:absolute;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
   font-size: 36px;
   color: white;
+} */
+
+.header-title {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 36px;
+  color: white;
+  white-space: nowrap;         /* Verhindert Umbruch */
+  max-width: 90vw;             /* Verhindert Überlauf auf kleinen Bildschirmen */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #0056b3; /* Hintergrundfarbe Orange */
+  background: linear-gradient(to bottom, #0056b3, #0057b336);
+  /*background-color: #0056b3; /* Hintergrundfarbe Blau */
   font-family: Helvetica;
   display: flex;
   justify-content: center;
@@ -34,11 +49,13 @@ body {
 .centered-box {
   width: 700px;
   height: 600px;
-  background-color: rgb(172, 172, 172); /* Graue Fläche */
+  background-color: rgba(172, 172, 172, 0.378); /* Graue Fläche */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column; /* Füge diese Zeile hinzu, um den Inhalt vertikal zu ordnen */
+  border-radius: 20px; /* 👈 Runde Ecken */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .house {
@@ -109,10 +126,11 @@ body {
   font-weight: bold;
   transition: background-color 0.3s ease;
   width: 30%; /* Alle Buttons gleichmäßig verteilen */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .button:hover {
-  background-color: #0056b3; /* Helleres Blau bei Hover */
+  background-color: #0057b3b1; /* Dunkleres Blau bei Hover */
 }
 
 .house.green .walls {
@@ -139,16 +157,21 @@ background-color: var(--col-green);
   border-bottom: var(--border-red);
 }
 
+.button.active {
+  background-color: #0056b3; /* z. B. grün für aktiv */
+  color: white;
+}
+
 @media (max-width: 768px) {
   .centered-box {
     width: 90%;
-    height: auto;
-    padding: 20px 0;
+    height:auto;
+    padding: 40px 0;
   }
 
   .header-title {
-    font-size: 28px;
-    top: 70px;
+    font-size: 30px;
+    top: 90px;
     text-align: center;
     padding: 0 10px;
   }
@@ -176,11 +199,11 @@ background-color: var(--col-green);
   } 
   */
 
-  .number {
+  /*.number {
     font-size: 36px;
-  }
+  }*/
 
   .text {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
