@@ -139,7 +139,7 @@ background-color: var(--col-green);
   border-bottom: var(--border-red);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .centered-box {
     width: 90%;
     height: auto;
