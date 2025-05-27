@@ -138,3 +138,48 @@ background-color: var(--col-green);
 .house.red .roof {
   border-bottom: var(--border-red);
 }
+
+@media (max-width: 600px) {
+  .centered-box {
+    width: 90%;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .header-title {
+    font-size: 28px;
+    top: 40px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .buttons {
+    flex-direction: column;       /* Buttons untereinander */
+    align-items: center;          /* Zentrieren */
+    margin-top: 60px;
+    gap: 15px;                    /* Abstand zwischen Buttons */
+  }
+
+  .button {
+    width: 80%;                   /* Breitere Buttons für Mobile */
+    font-size: 20px;
+  }
+
+  .house {
+    width: 150px;
+    height: auto;
+  }
+
+  .walls {
+    width: 150px;
+    height: 120px;
+  }
+
+  .number {
+    font-size: 36px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}
