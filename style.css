@@ -9,16 +9,6 @@
   --border-red: 100px solid var(--col-red);
 }
 
-/*.header-title {
-  position:absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  font-size: 36px;
-  color: white;
-} */
-
 .header-title {
   position: absolute;
   top: 60px;
@@ -31,7 +21,8 @@
   max-width: 90vw;             /* Verhindert Überlauf auf kleinen Bildschirmen */
   overflow: hidden;
   text-overflow: ellipsis;
-}
+} 
+
 
 body {
   margin: 0;
