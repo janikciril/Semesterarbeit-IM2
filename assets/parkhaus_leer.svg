@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 632.57 480.13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 14px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #b3b3b3;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: #e6e6e6;
+      }
+
+      .cls-4 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 36px;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: #b3b3b3;
+      }
+
+      .cls-2 {
+        fill: #ccc;
+        stroke-width: 5px;
+      }
+
+      .cls-7 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        letter-spacing: .02em;
+      }
+
+      .cls-12 {
+        letter-spacing: 0em;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g id="Parkhaus_Body">
+    <g>
+      <rect class="cls-3" x="9.5" y="113.05" width="613.57" height="360.08"/>
+      <path class="cls-6" d="M616.07,120.05v346.08H16.5V120.05h599.57M630.07,106.05H2.5v374.08h627.57V106.05h0Z"/>
+    </g>
+    <line class="cls-1" x1="4.6" y1="406.43" x2="629.55" y2="406.43"/>
+    <line class="cls-1" x1="3.68" y1="331.02" x2="629.81" y2="331.02"/>
+    <line class="cls-1" x1="2.51" y1="255.6" x2="629.81" y2="255.6"/>
+    <line class="cls-1" x1="3.46" y1="180.19" x2="629.55" y2="180.19"/>
+    <g>
+      <rect class="cls-5" x="273.83" y="433.6" width="83.86" height="44.03"/>
+      <path class="cls-6" d="M355.2,436.1v39.03h-78.86v-39.03h78.86M360.2,431.1h-88.86v49.03h88.86v-49.03h0Z"/>
+    </g>
+  </g>
+  <g id="Schild">
+    <rect class="cls-2" x="2.5" y="2.5" width="627.57" height="68.72" rx="8.75" ry="8.75"/>
+    <rect class="cls-6" x="522.88" y="71.29" width="8.87" height="34.83"/>
+    <rect class="cls-6" x="100.82" y="71.29" width="8.87" height="34.83"/>
+  </g>
+  <g id="Text">
+    <text class="cls-4" transform="translate(148.84 49)"><tspan class="cls-13" x="0" y="0">H</tspan><tspan x="23.83" y="0">ier s</tspan><tspan class="cls-8" x="83.95" y="0">t</tspan><tspan x="95.65" y="0">ehen </tspan><tspan class="cls-7" x="179.31" y="0">P</tspan><tspan x="197.53" y="0">a</tspan><tspan class="cls-12" x="214.88" y="0">r</tspan><tspan class="cls-11" x="226.8" y="0">k</tspan><tspan x="244.29" y="0">pl</tspan><tspan class="cls-9" x="273.27" y="0">ä</tspan><tspan x="290.48" y="0">t</tspan><tspan class="cls-10" x="302.4" y="0">z</tspan><tspan x="317.55" y="0">e</tspan></text>
+  </g>
+</svg>

@@ -1,6 +1,7 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 632.57 480.13">
-  <ns0:defs>
-    <ns0:style>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 632.57 480.13">
+  <defs>
+    <style>
       .cls-1 {
         fill: none;
         stroke-width: 14px;
@@ -72,40 +73,40 @@
       .cls-16 {
         letter-spacing: 0em;
       }
-    </ns0:style>
-  </ns0:defs>
-  <ns0:g id="Parkhaus_Body">
-    <ns0:g>
-      <ns0:rect class="cls-3" x="9.5" y="113.05" width="613.57" height="360.08" />
-      <ns0:path class="cls-8" d="M616.07,120.05v346.08H16.5V120.05h599.57M630.07,106.05H2.5v374.08h627.57V106.05h0Z" />
-    </ns0:g>
-    <ns0:line class="cls-1" x1="4.6" y1="406.43" x2="629.55" y2="406.43" />
-    <ns0:line class="cls-1" x1="3.68" y1="331.02" x2="629.81" y2="331.02" />
-    <ns0:line class="cls-1" x1="2.51" y1="255.6" x2="629.81" y2="255.6" />
-    <ns0:line class="cls-1" x1="3.46" y1="180.19" x2="629.55" y2="180.19" />
-    <ns0:g>
-      <ns0:rect class="cls-7" x="273.83" y="433.6" width="83.86" height="44.03" />
-      <ns0:path class="cls-8" d="M355.2,436.1v39.03h-78.86v-39.03h78.86M360.2,431.1h-88.86v49.03h88.86v-49.03h0Z" />
-    </ns0:g>
-  </ns0:g>
-  <ns0:g id="Schild">
-    <ns0:rect class="cls-2" x="2.5" y="2.5" width="627.57" height="68.72" rx="8.75" ry="8.75" />
-    <ns0:rect class="cls-8" x="522.88" y="71.29" width="8.87" height="34.83" />
-    <ns0:rect class="cls-8" x="100.82" y="71.29" width="8.87" height="34.83" />
-  </ns0:g>
-  <ns0:g id="Autos">
-    <ns0:rect class="cls-6" x="525.63" y="446.62" width="31.21" height="19.51" />
-    <ns0:rect class="cls-6" x="222.59" y="446.62" width="31.21" height="19.51" />
-    <ns0:rect class="cls-6" x="75.22" y="446.62" width="31.21" height="19.51" />
-    <ns0:rect class="cls-4" x="575.27" y="446.62" width="31.21" height="19.51" />
-    <ns0:rect class="cls-4" x="376.7" y="446.62" width="31.21" height="19.51" />
-    <ns0:rect class="cls-4" x="173.47" y="446.62" width="31.21" height="19.51" />
-    <ns0:rect class="cls-11" x="475.99" y="446.62" width="31.21" height="19.51" />
-    <ns0:rect class="cls-11" x="426.34" y="446.62" width="31.21" height="19.51" />
-    <ns0:rect class="cls-11" x="26.09" y="446.63" width="31.21" height="19.51" />
-    <ns0:rect class="cls-11" x="124.34" y="446.62" width="31.21" height="19.51" />
-  </ns0:g>
-  <ns0:g id="Text">
-    <ns0:text class="cls-5" transform="translate(148.84 49)"><ns0:tspan class="cls-16" x="0" y="0">H</ns0:tspan><ns0:tspan x="23.83" y="0">ier s</ns0:tspan><ns0:tspan class="cls-10" x="83.95" y="0">t</ns0:tspan><ns0:tspan x="95.65" y="0">ehen </ns0:tspan><ns0:tspan class="cls-9" x="179.31" y="0">P</ns0:tspan><ns0:tspan x="197.53" y="0">a</ns0:tspan><ns0:tspan class="cls-15" x="214.88" y="0">r</ns0:tspan><ns0:tspan class="cls-14" x="226.8" y="0">k</ns0:tspan><ns0:tspan x="244.29" y="0">pl</ns0:tspan><ns0:tspan class="cls-12" x="273.27" y="0">ä</ns0:tspan><ns0:tspan x="290.48" y="0">t</ns0:tspan><ns0:tspan class="cls-13" x="302.4" y="0">z</ns0:tspan><ns0:tspan x="317.55" y="0">e</ns0:tspan></ns0:text>
-  </ns0:g>
-</ns0:svg>
+    </style>
+  </defs>
+  <g id="Parkhaus_Body">
+    <g>
+      <rect class="cls-3" x="9.5" y="113.05" width="613.57" height="360.08"/>
+      <path class="cls-8" d="M616.07,120.05v346.08H16.5V120.05h599.57M630.07,106.05H2.5v374.08h627.57V106.05h0Z"/>
+    </g>
+    <line class="cls-1" x1="4.6" y1="406.43" x2="629.55" y2="406.43"/>
+    <line class="cls-1" x1="3.68" y1="331.02" x2="629.81" y2="331.02"/>
+    <line class="cls-1" x1="2.51" y1="255.6" x2="629.81" y2="255.6"/>
+    <line class="cls-1" x1="3.46" y1="180.19" x2="629.55" y2="180.19"/>
+    <g>
+      <rect class="cls-7" x="273.83" y="433.6" width="83.86" height="44.03"/>
+      <path class="cls-8" d="M355.2,436.1v39.03h-78.86v-39.03h78.86M360.2,431.1h-88.86v49.03h88.86v-49.03h0Z"/>
+    </g>
+  </g>
+  <g id="Schild">
+    <rect class="cls-2" x="2.5" y="2.5" width="627.57" height="68.72" rx="8.75" ry="8.75"/>
+    <rect class="cls-8" x="522.88" y="71.29" width="8.87" height="34.83"/>
+    <rect class="cls-8" x="100.82" y="71.29" width="8.87" height="34.83"/>
+  </g>
+  <g id="Autos">
+    <rect class="cls-6" x="525.63" y="446.62" width="31.21" height="19.51"/>
+    <rect class="cls-6" x="222.59" y="446.62" width="31.21" height="19.51"/>
+    <rect class="cls-6" x="75.22" y="446.62" width="31.21" height="19.51"/>
+    <rect class="cls-4" x="575.27" y="446.62" width="31.21" height="19.51"/>
+    <rect class="cls-4" x="376.7" y="446.62" width="31.21" height="19.51"/>
+    <rect class="cls-4" x="173.47" y="446.62" width="31.21" height="19.51"/>
+    <rect class="cls-11" x="475.99" y="446.62" width="31.21" height="19.51"/>
+    <rect class="cls-11" x="426.34" y="446.62" width="31.21" height="19.51"/>
+    <rect class="cls-11" x="26.09" y="446.63" width="31.21" height="19.51"/>
+    <rect class="cls-11" x="124.34" y="446.62" width="31.21" height="19.51"/>
+  </g>
+  <g id="Text">
+    <text class="cls-5" transform="translate(148.84 49)"><tspan class="cls-16" x="0" y="0">H</tspan><tspan x="23.83" y="0">ier s</tspan><tspan class="cls-10" x="83.95" y="0">t</tspan><tspan x="95.65" y="0">ehen </tspan><tspan class="cls-9" x="179.31" y="0">P</tspan><tspan x="197.53" y="0">a</tspan><tspan class="cls-15" x="214.88" y="0">r</tspan><tspan class="cls-14" x="226.8" y="0">k</tspan><tspan x="244.29" y="0">pl</tspan><tspan class="cls-12" x="273.27" y="0">ä</tspan><tspan x="290.48" y="0">t</tspan><tspan class="cls-13" x="302.4" y="0">z</tspan><tspan x="317.55" y="0">e</tspan></text>
+  </g>
+</svg>
