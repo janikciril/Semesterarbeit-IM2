@@ -86,7 +86,7 @@ function createAndAnimateCar() {
   img.src = carImages[Math.floor(Math.random() * carImages.length)];
   img.classList.add("car");
 
-  const startY = Math.random() * window.innerHeight * 0.8;
+  const startY = window.innerHeight * 0.5 + Math.random() * window.innerHeight * 0.5;
   const direction = Math.random() > 0.5 ? 1 : -1;
   const startX = direction === 1 ? -100 : window.innerWidth + 100;
 
