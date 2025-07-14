@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll(".button");
 const parkingNumber = document.getElementById("parking-number");
-const house = document.querySelector(".house");
 const carsContainer = document.getElementById("cars-container");
+const svgContainer = document.getElementById("svg-container");
 
 const carImages = [
   "assets/car1.svg",
@@ -11,19 +11,18 @@ const carImages = [
 
 buttons.forEach(button => {
   button.addEventListener('click', async () => {
-    // Aktive Klasse setzen
     buttons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
 
-    // Daten abrufen
     const parkingName = button.getAttribute("data-parking");
+
     try {
       const parkingData = await fetchParkingData(parkingName);
       showData(parkingData);
     } catch (error) {
       console.error("Fehler beim Abrufen der Daten:", error);
       parkingNumber.textContent = "Fehler";
-      setHouseColorByOccupancy(null); // z. B. Farbe nicht setzen
+      svgContainer.innerHTML = "";
     }
   });
 });
@@ -41,32 +40,44 @@ function showData(parkingData) {
   const occupancy = parkingData.results[0].belegung_prozent;
 
   parkingNumber.textContent = freeSpaces;
-  setHouseColorByOccupancy(occupancy);
-}
-
-function setHouseColorByOccupancy(occupancy) {
-  house.classList.remove("green", "orange", "red");
+  updateSVGByOccupancy(occupancy);
 
   let carCount = 0;
+  if (occupancy <= 20) {
+    carCount = 5;
+  } else if (occupancy <= 80) {
+    carCount = 10;
+  } else {
+    carCount = 15;
+  }
+
+  for (let i = 0; i < carCount; i++) {
+    setTimeout(() => createAndAnimateCar(), i * 300);
+  }
+}
+
+async function updateSVGByOccupancy(occupancy) {
+  let svgFile = "";
 
   if (occupancy === null || occupancy === undefined) {
+    svgContainer.innerHTML = "";
     return;
   }
 
   if (occupancy <= 20) {
-    house.classList.add("green");
-    carCount = 5;
+    svgFile = "assets/parkhaus_lte_20.svg";
   } else if (occupancy <= 80) {
-    house.classList.add("orange");
-    carCount = 10;
+    svgFile = "assets/parkhaus_lte_80.svg";
   } else {
-    house.classList.add("red");
-    carCount = 15;
+    svgFile = "assets/parkhaus_voll.svg";
   }
 
-  // Autos losfahren lassen
-  for (let i = 0; i < carCount; i++) {
-    setTimeout(() => createAndAnimateCar(), i * 300);
+  try {
+    const response = await fetch(svgFile);
+    const svgText = await response.text();
+    svgContainer.innerHTML = svgText;
+  } catch (error) {
+    console.error("Fehler beim Laden des SVG:", error);
   }
 }
 
@@ -83,7 +94,6 @@ function createAndAnimateCar() {
   img.style.left = `${startX}px`;
   img.style.transform = `scaleX(${direction})`;
   img.style.position = "absolute";
-  img.style.width = "100px"; // grössere Autos
 
   carsContainer.appendChild(img);
 

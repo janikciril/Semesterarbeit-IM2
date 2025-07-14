@@ -1,12 +1,19 @@
-/* style.css */
-
 :root {
   --col-orange: #FDB100;
-  --border-orange: 100px solid var(--col-orange);
   --col-green: #20CA10;
-  --border-green: 100px solid var(--col-green);
   --col-red: #FA0505;
-  --border-red: 100px solid var(--col-red);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #0056b3, #0057b336);
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
 }
 
 .header-title {
@@ -17,97 +24,54 @@
   margin: 0;
   font-size: 36px;
   color: white;
-  white-space: nowrap;         /* Verhindert Umbruch */
-  max-width: 90vw;             /* Verhindert Überlauf auf kleinen Bildschirmen */
+  white-space: nowrap;
+  max-width: 90vw;
   overflow: hidden;
   text-overflow: ellipsis;
-} 
-
-
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #0056b3, #0057b336);
-  /*background-color: #0056b3; /* Hintergrundfarbe Blau */
-  font-family: Helvetica;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Stellt sicher, dass der Body die volle Höhe des Bildschirms einnimmt */
-  position: relative;
 }
 
 .centered-box {
   width: 700px;
   height: 600px;
-  background-color: rgba(172, 172, 172, 0.378); /* Graue Fläche */
+  background-color: rgba(172, 172, 172, 0.378);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Füge diese Zeile hinzu, um den Inhalt vertikal zu ordnen */
-  border-radius: 20px; /* 👈 Runde Ecken */
+  flex-direction: column;
+  border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.house {
-  width: 200px;
-  height: 220px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+#svg-container {
+  width: 500px;
+  height: auto;
 }
 
-.roof {
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 100px solid #20CA10; /* Dachfarbe, variabel */
-}
-
-.walls {
-  width: 200px;
-  height: 160px;
-  background-color: #20CA10;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.number {
-  font-size: 42px; /* Zahl größer als Text */
-  font-weight: bold;
-  position: relative;
-  top: -30px; /* Verschiebt die Zahl nach oben */
-}
-
-.text {
-  font-size: 20px;
-  font-weight: bold;
+.text-overlay {
+  margin-top: 20px;
   text-align: center;
 }
 
-/* Optional: Zum Ändern der Dachfarbe */
-body {
-  --roof-color: #28a745; /* Grün als Standard, kann aber angepasst werden */
+.text-overlay .number {
+  font-size: 42px;
+  font-weight: bold;
 }
 
-/* Buttons unterhalb des Hauses */
+.text-overlay .text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .buttons {
-  margin-top: 110px; /* Abstand zwischen dem Haus und den Buttons */
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 600px; /* Maximale Breite der Buttons */
+  max-width: 600px;
 }
 
 .button {
-  background-color: #007bff; /* Blau */
+  background-color: #007bff;
   color: white;
   border: none;
   padding: 12px;
@@ -116,47 +80,40 @@ body {
   font-size: 24px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  width: 30%; /* Alle Buttons gleichmäßig verteilen */
+  width: 30%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .button:hover {
-  background-color: #0057b3b1; /* Dunkleres Blau bei Hover */
-}
-
-.house.green .walls {
-background-color: var(--col-green);
-}
-
-.house.green .roof {
-  border-bottom: var(--border-green); /* Dachfarbe, variabel */
-}
-
-.house.orange .walls {
-  background-color: var(--col-orange);
-}
-
-.house.orange .roof {
-  border-bottom: var(--border-orange);
-}
-
-.house.red .walls {
-  background-color: var(--col-red);
-}
-
-.house.red .roof {
-  border-bottom: var(--border-red);
+  background-color: #0057b3b1;
 }
 
 .button.active {
-  background-color: #0056b3; /* z. B. grün für aktiv */
+  background-color: #0056b3;
   color: white;
+}
+
+#cars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.car {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  transition: transform 0.2s;
 }
 
 @media (max-width: 768px) {
   .centered-box {
     width: 90%;
-    height:auto;
+    height: auto;
     padding: 40px 0;
   }
 
@@ -168,49 +125,18 @@ background-color: var(--col-green);
   }
 
   .buttons {
-    flex-direction: column;       /* Buttons untereinander */
-    align-items: center;          /* Zentrieren */
+    flex-direction: column;
+    align-items: center;
     margin-top: 60px;
-    gap: 15px;                    /* Abstand zwischen Buttons */
+    gap: 15px;
   }
 
   .button {
-    width: 80%;                   /* Breitere Buttons für Mobile */
+    width: 80%;
     font-size: 20px;
   }
 
-  /*.house {
-    width: 150px;
-    height: auto;
-  }
-
-  .walls {
-    width: 150px;
-    height: 120px;
-  } 
-  */
-
-  /*.number {
-    font-size: 36px;
-  }*/
-
-  .text {
+  .text-overlay .text {
     font-size: 20px;
   }
-}
-#cars-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Autos blockieren keine Klicks */
-  z-index: 10;
-}
-
-.car {
-  position: absolute;
-  width: 100px; /* oder anpassen je nach SVG-Größe */
-  height: auto;
-  transition: transform 0.2s;
 }
