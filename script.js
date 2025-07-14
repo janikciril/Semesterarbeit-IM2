@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll(".button");
-const parkingNumber = document.getElementById("parking-number");
+const parkingStatus = document.getElementById("parking-status");
 const carsContainer = document.getElementById("cars-container");
 const svgContainer = document.getElementById("svg-container");
 
@@ -21,7 +21,7 @@ buttons.forEach(button => {
       showData(parkingData);
     } catch (error) {
       console.error("Fehler beim Abrufen der Daten:", error);
-      parkingNumber.textContent = "Fehler";
+      parkingStatus.textContent = "Fehler";
       svgContainer.innerHTML = "";
     }
   });
@@ -39,8 +39,8 @@ function showData(parkingData) {
   const freeSpaces = parkingData.results[0].shortfree;
   const occupancy = parkingData.results[0].belegung_prozent;
 
-  parkingNumber.textContent = freeSpaces;
-  updateSVGByOccupancy(occupancy);
+  parkingStatus.textContent = `${freeSpaces} freie Parkplätze`;
+  updateSVGByOccupancy(occupancy, freeSpaces); // freeSpaces mitgeben
 
   let carCount = 0;
   if (occupancy <= 20) {
@@ -79,7 +79,9 @@ async function updateSVGByOccupancy(occupancy) {
     const svgText = await response.text();
     svgContainer.innerHTML = svgText;
   } catch (error) {
-    console.error("Fehler beim Laden des SVG:", error);
+    console.error("Fehler beim Abrufen der Daten:", error);
+    parkingStatus.textContent = "Wähle ein Parkhaus";
+    svgContainer.innerHTML = "";
   }
 }
 
