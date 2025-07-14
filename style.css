@@ -30,17 +30,6 @@ body {
   text-overflow: ellipsis;
 }
 
-.centered-box {
-  width: 700px;
-  height: 600px;
-  background-color: rgba(172, 172, 172, 0.378);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
 
 #svg-container {
   width: 500px;
@@ -108,35 +97,4 @@ body {
   width: 100px;
   height: auto;
   transition: transform 0.2s;
-}
-
-@media (max-width: 768px) {
-  .centered-box {
-    width: 90%;
-    height: auto;
-    padding: 40px 0;
-  }
-
-  .header-title {
-    font-size: 30px;
-    top: 90px;
-    text-align: center;
-    padding: 0 10px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-    gap: 15px;
-  }
-
-  .button {
-    width: 80%;
-    font-size: 20px;
-  }
-
-  .text-overlay .text {
-    font-size: 20px;
-  }
 }
