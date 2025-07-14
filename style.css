@@ -5,7 +5,6 @@
 }
 
 body {
-  
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, #0056b3, #0057b336);
@@ -15,16 +14,6 @@ body {
   align-items: center;
   height: 100vh;
   position: relative;
-}
-
-.bottom-overlay {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50vh; /* untere Hälfte */
-  background-color: #2f2f2f; /* dunkelgrau */
-  z-index: -1; /* hinter allem anderen */
 }
 
 .header-title {
@@ -41,13 +30,6 @@ body {
   text-overflow: ellipsis;
 }
 
-.centered-box {
-  position: relative;
-  z-index: 2; /* über den Autos */
-}
-
-
-
 #svg-container {
   width: 500px;
   height: auto;
@@ -56,7 +38,6 @@ body {
 .text-overlay {
   margin-top: 20px;
   text-align: center;
-  z-index: 2;
 }
 
 .text-overlay .number {
@@ -75,10 +56,7 @@ body {
   justify-content: space-between;
   width: 100%;
   max-width: 600px;
-  z-index: 2; /* über den Autos */
 }
-
-
 
 .button {
   background-color: #007bff;
@@ -95,7 +73,7 @@ body {
 }
 
 .button:hover {
-  background-color: #0057b3;
+  background-color: #0057b3b1;
 }
 
 .button.active {
@@ -110,7 +88,7 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 0;
+  z-index: 10;
 }
 
 .car {

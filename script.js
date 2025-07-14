@@ -72,6 +72,8 @@ async function updateSVGByOccupancy(occupancy) {
     svgFile = "assets/parkhaus_voll.svg";
   }
 
+  updateSVG(svgFile);
+
   try {
     const response = await fetch(svgFile);
     const svgText = await response.text();
@@ -115,4 +117,17 @@ function createAndAnimateCar() {
   setTimeout(() => {
     img.remove();
   }, duration);
+}
+
+// Leeres Parkhaus beim ersten Laden anzeigen
+updateSVG("assets/parkhaus_leer.svg");
+
+async function updateSVG(filePath) {
+  try {
+    const response = await fetch(filePath);
+    const svgText = await response.text();
+    svgContainer.innerHTML = svgText;
+  } catch (error) {
+    console.error("Fehler beim Laden des SVG:", error);
+  }
 }
