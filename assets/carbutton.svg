@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #b7cfe2;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #b7cfe2;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #3d748f;
+      }
+
+      .cls-3 {
+        fill: #3d748f;
+      }
+
+      .cls-4 {
+        fill: #444946;
+        stroke: #444946;
+      }
+    </style>
+  </defs>
+  <g id="auto">
+    <ellipse class="cls-4" cx="304.06" cy="387.71" rx="24.24" ry="36.14"/>
+    <ellipse class="cls-4" cx="618.71" cy="387.71" rx="24.24" ry="36.14"/>
+    <path class="cls-3" d="M674.38,269.22h-52.79c.06-.68.1-1.37.1-2.06v-41.16c0-12.8-10.38-23.18-23.18-23.18h-274.05c-12.8,0-23.18,10.38-23.18,23.18v41.16c0,.7.04,1.38.1,2.06h-50.05c-4.71,0-8.53,3.82-8.53,8.53v96.04c0,4.71,3.82,8.53,8.53,8.53h423.07c4.71,0,8.53-3.82,8.53-8.53v-96.04c0-4.71-3.82-8.53-8.53-8.53Z"/>
+    <rect class="cls-2" x="319.78" y="209.45" width="283.2" height="56.71" rx="17.54" ry="17.54"/>
+  </g>
+  <g id="scheinwerfer">
+    <circle id="scheinwerfer-rechts" class="cls-1" cx="286.2" cy="319.68" r="29.34"/>
+    <circle id="scheinwerfer-links" class="cls-1" cx="638.27" cy="319.68" r="29.34"/>
+  </g>
+</svg>
