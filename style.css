@@ -1,3 +1,4 @@
+/* Seiten-Layout */
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@ body {
   align-items: center;
   height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
 .bottom-overlay {
@@ -22,7 +24,7 @@ body {
 
 .header-title {
   position: absolute;
-  top: 150px;
+  top: 80px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -42,14 +44,6 @@ body {
 #svg-container {
   width: 500px;
   height: auto;
-}
-
-.text-display {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 16px;
 }
 
 .buttons {
@@ -101,6 +95,40 @@ body {
   transition: transform 0.2s;
 }
 
+/* Versteckt, falls vorhanden */
 #parking-status {
   display: none;
+}
+
+/* WOLKEN-STYLES */
+.wolke {
+  position: absolute;
+  top: 50px;
+  left: 110%;
+  width: 400px;
+  height: auto;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+  animation: fly-left 25s linear infinite;
+}
+
+.wolke1 {
+  top: 60px;
+  animation-delay: 0s;
+}
+
+.wolke2 {
+  top: 110px;
+  width: 350px;
+  animation-delay: 8s;
+}
+
+@keyframes fly-left {
+  0% {
+    left: 110%;
+  }
+  100% {
+    left: -400px;
+  }
 }
