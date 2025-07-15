@@ -106,3 +106,7 @@ body {
   height: auto;
   transition: transform 0.2s;
 }
+
+#parking-status {
+  display: none;
+}

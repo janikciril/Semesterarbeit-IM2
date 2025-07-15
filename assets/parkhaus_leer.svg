@@ -83,11 +83,11 @@
     <rect class="cls-6" x="100.82" y="71.29" width="8.87" height="34.83"/>
   </g>
  <text id="Text"
-      x="500"
-      y="160"
-      font-size="32"
+      x="320"
+      y="50"
+      font-size="40"
       text-anchor="middle"
-      fill="#000000"
-      font-family="Arial, sans-serif">
+      fill="#000000ff"
+      font-family="Funnel Display, sans-serif">
 </text>
 </svg>

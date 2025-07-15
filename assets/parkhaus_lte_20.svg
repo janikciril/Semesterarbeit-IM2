@@ -106,12 +106,12 @@
     <rect class="cls-11" x="26.09" y="446.63" width="31.21" height="19.51"/>
     <rect class="cls-11" x="124.34" y="446.62" width="31.21" height="19.51"/>
   </g>
-<text id="Text"
-      x="500"
-      y="160"
-      font-size="32"
+ <text id="Text"
+      x="320"
+      y="50"
+      font-size="40"
       text-anchor="middle"
-      fill="#000000"
-      font-family="Arial, sans-serif">
+      fill="#000000ff"
+      font-family="Funnel Display Medium, sans-serif">
 </text>
 </svg>
