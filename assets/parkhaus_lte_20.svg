@@ -106,7 +106,12 @@
     <rect class="cls-11" x="26.09" y="446.63" width="31.21" height="19.51"/>
     <rect class="cls-11" x="124.34" y="446.62" width="31.21" height="19.51"/>
   </g>
-  <g id="Text">
-    <text class="cls-5" transform="translate(148.84 49)"><tspan class="cls-16" x="0" y="0">H</tspan><tspan x="23.83" y="0">ier s</tspan><tspan class="cls-10" x="83.95" y="0">t</tspan><tspan x="95.65" y="0">ehen </tspan><tspan class="cls-9" x="179.31" y="0">P</tspan><tspan x="197.53" y="0">a</tspan><tspan class="cls-15" x="214.88" y="0">r</tspan><tspan class="cls-14" x="226.8" y="0">k</tspan><tspan x="244.29" y="0">pl</tspan><tspan class="cls-12" x="273.27" y="0">ä</tspan><tspan x="290.48" y="0">t</tspan><tspan class="cls-13" x="302.4" y="0">z</tspan><tspan x="317.55" y="0">e</tspan></text>
-  </g>
+<text id="Text"
+      x="500"
+      y="160"
+      font-size="32"
+      text-anchor="middle"
+      fill="#000000"
+      font-family="Arial, sans-serif">
+</text>
 </svg>
