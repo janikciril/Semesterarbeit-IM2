@@ -129,6 +129,11 @@ body {
 
 
 @media (max-width: 768px) {
+
+  body {
+    background-color: #0056b3;
+  }
+
   .header-title {
     font-size: 10vw; /* Skalierung mit Viewport-Breite */
   }
