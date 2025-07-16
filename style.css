@@ -126,3 +126,33 @@ body {
     left: -400px;
   }
 }
+
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 10vw; /* Skalierung mit Viewport-Breite */
+  }
+
+  #svg-container {
+    width: 90vw;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /* etwas Abstand zwischen Buttons */
+  }
+
+  .button {
+    width: 80%;
+    font-size: 20px;
+    padding: 14px;
+  }
+
+  .centered-box {
+    margin-top: 2vh;
+    padding: 0 10px;
+  }
+}
