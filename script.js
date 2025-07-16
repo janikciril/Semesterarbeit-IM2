@@ -36,6 +36,7 @@ async function fetchParkingData(parkingName) {
 }
 
 function showData(parkingData) {
+  console.log(parkingData);
   const freeSpaces = parkingData.results[0].shortfree;
   const occupancy = parkingData.results[0].belegung_prozent;
 
@@ -47,7 +48,7 @@ function showData(parkingData) {
   } else if (occupancy <= 80) {
     carCount = 10;
   } else {
-    carCount = 15;
+    carCount = 20;
   }
 
   for (let i = 0; i < carCount; i++) {
@@ -62,6 +63,7 @@ async function updateSVGByOccupancy(occupancy, freeSpaces) {
     svgContainer.innerHTML = "";
     return;
   }
+  
 
   if (occupancy <= 20) {
     svgFile = "assets/parkhaus_lte_20.svg";
@@ -71,7 +73,7 @@ async function updateSVGByOccupancy(occupancy, freeSpaces) {
     svgFile = "assets/parkhaus_voll.svg";
   }
 
-  await updateSVG(svgFile, `${freeSpaces} freie Parkplätze`);
+  await updateSVG(svgFile, `freie Parkplätze`, freeSpaces);
 }
 
 function createAndAnimateCar() {
@@ -111,9 +113,9 @@ function createAndAnimateCar() {
 }
 
 // Leeres Parkhaus beim ersten Laden anzeigen
-updateSVG("assets/parkhaus_leer.svg", "Wähle ein Parkhaus");
+updateSVG("assets/parkhaus_leer.svg", "Wähle ein Parkhaus", "");
 
-async function updateSVG(filePath, textContent = "") {
+async function updateSVG(filePath, textContent = "", zahlContent = "") {
   try {
     const response = await fetch(filePath);
     const svgText = await response.text();
@@ -121,9 +123,11 @@ async function updateSVG(filePath, textContent = "") {
 
     const svgDoc = svgContainer.querySelector("svg");
     const textElement = svgDoc?.getElementById("Text");
+    const zahlElement = svgDoc?.getElementById("Zahl");
 
     if (textElement) {
       textElement.textContent = textContent;
+      zahlElement.textContent = zahlContent
     }
   } catch (error) {
     console.error("Fehler beim Laden des SVG:", error);

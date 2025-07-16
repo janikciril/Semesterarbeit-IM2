@@ -82,7 +82,15 @@
     <rect class="cls-6" x="522.88" y="71.29" width="8.87" height="34.83"/>
     <rect class="cls-6" x="100.82" y="71.29" width="8.87" height="34.83"/>
   </g>
- <text id="Text"
+ <text id="Zahl"
+      x="320"
+      y="50"
+      font-size="40"
+      text-anchor="middle"
+      fill="#000000ff"
+      font-family="Funnel Display, sans-serif">
+</text>
+<text id="Text"
       x="320"
       y="50"
       font-size="40"
