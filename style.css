@@ -6,7 +6,6 @@ body {
   font-family: Helvetica Bold, sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -23,22 +22,17 @@ body {
 }
 
 .header-title {
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
   font-size: 80px;
   color: white;
   white-space: nowrap;
   max-width: 90vw;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-align: center;
 }
 
 .centered-box {
   position: relative;
   z-index: 2;
+  margin-top: 7vh;
 }
 
 #svg-container {
