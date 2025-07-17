@@ -152,6 +152,15 @@
     <rect class="cls-11" x="426.42" y="229.08" width="31.21" height="19.51"/>
     <rect class="cls-11" x="525.56" y="229.07" width="31.21" height="19.51"/>
   </g>
+  <text id="Zahl"
+      x="197"
+      y="50"
+      font-size="40"
+      text-anchor="end"
+      fill="#000000ff"
+      font-family="'Overpass', sans-serif"
+      font-weight="bold">
+  </text>
  <text id="Text"
       x="320"
       y="50"
