@@ -156,6 +156,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    background: #0056b3 !important;
+  }
+
   .header-title {
     font-size: 10vw; /* Skalierung mit Viewport-Breite */
     letter-spacing: 0;
