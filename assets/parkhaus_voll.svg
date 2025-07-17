@@ -161,13 +161,13 @@
       font-family="'Overpass', sans-serif"
       font-weight="bold">
   </text>
- <text id="Text"
+  <text id="Text"
       x="348"
       y="50"
       font-size="40"
       text-anchor="middle"
       fill="#000000ff"
       font-family="'Overpass', sans-serif"
-      font-weight="bold">
-</text>
+      font-weight="medium">
+  </text>
 </svg>
