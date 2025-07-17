@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parkplatzanzeige St. Gallen</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-</head>
-<body>
-
-  <!--  Wolken (ausserhalb vom restlichen Layout) -->
-  <img src="assets/Wolke1.svg" alt="Wolke 1" class="wolke wolke1" />
-  <img src="assets/Wolke2.svg" alt="Wolke 2" class="wolke wolke2" />
-
-  <!--  Hauptinhalt -->
-  <div class="bottom-overlay"></div>
- 
-
-  <div class="centered-box">
-     <h1 class="header-title">Parkgallen</h1>
-    <div id="svg-container"></div>
-
-    <div class="buttons">
-      <button class="button" data-parking="Bahnhof">Bahnhof</button>
-      <button class="button" data-parking="Manor">Manor</button>
-      <button class="button" data-parking="Neumarkt">Neumarkt</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parkplatzanzeige St. Gallen</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--  Wolken (ausserhalb vom restlichen Layout) -->
+    <div class="wolken">
+      <img src="assets/Wolke1.svg" alt="Wolke 1" class="wolke wolke1" />
+      <img src="assets/Wolke2.svg" alt="Wolke 2" class="wolke wolke2" />
     </div>
-  </div>
 
-  <div id="cars-container"></div>
-  <script src="script.js" type="module"></script>
-</body>
+    <!--  Hauptinhalt -->
+    <div class="bottom-overlay"></div>
+
+    <div class="centered-box">
+      <h1 class="header-title">Parkgallen</h1>
+      <div id="svg-container"></div>
+
+      <div class="buttons">
+        <button class="button" data-parking="Bahnhof">Bahnhof</button>
+        <button class="button" data-parking="Manor">Manor</button>
+        <button class="button" data-parking="Neumarkt">Neumarkt</button>
+      </div>
+    </div>
+
+    <div id="cars-container"></div>
+    <script src="script.js" type="module"></script>
+  </body>
 </html>

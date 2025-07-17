@@ -8,7 +8,7 @@
       }
 
       .cls-1, .cls-2 {
-        stroke: #b3b3b3;
+        stroke: #adb2c1;
         stroke-miterlimit: 10;
       }
 
@@ -17,7 +17,7 @@
       }
 
       .cls-4 {
-        fill: #966;
+        fill: #d04686;
       }
 
       .cls-5 {
@@ -26,7 +26,7 @@
       }
 
       .cls-6 {
-        fill: #5c9b76;
+        fill: #168c6d;
       }
 
       .cls-7 {
@@ -34,11 +34,11 @@
       }
 
       .cls-8 {
-        fill: #b3b3b3;
+        fill: #adb2c1;
       }
 
       .cls-2 {
-        fill: #ccc;
+        fill: #dcdfe6;
         stroke-width: 5px;
       }
 
@@ -158,6 +158,7 @@
       font-size="40"
       text-anchor="middle"
       fill="#000000ff"
-      font-family="Funnel Display Medium, sans-serif">
+      font-family="'Overpass', sans-serif"
+      font-weight="bold">
 </text>
 </svg>

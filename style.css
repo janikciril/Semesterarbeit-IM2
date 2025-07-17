@@ -2,8 +2,12 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #0056b3, #0057b336);
-  font-family: Helvetica Bold, sans-serif;
+  background: #0056b3;
+  background: linear-gradient(to bottom, #0056b3, rgba(0, 87, 179, 0.21));
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-position: center;
+  font-family: "Overpass", sans-serif;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -23,6 +27,7 @@ body {
 
 .header-title {
   font-size: 80px;
+  letter-spacing: -0.2rem;
   color: white;
   white-space: nowrap;
   max-width: 90vw;
@@ -50,26 +55,41 @@ body {
 }
 
 .button {
-  background-color: #007bff;
-  color: white;
   border: none;
-  padding: 12px;
+  padding: 28px 0 24px;
+  font-family: "Overpass", sans-serif;
+  color: white;
+  position: relative;
+  background: linear-gradient(45deg, #034184, #0a609d);
   border-radius: 8px;
   cursor: pointer;
   font-size: 24px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: transform 0.25s ease;
   width: 30%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+.button::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  z-index: 1;
+  pointer-events: none;
+  border: 0.1rem solid #fff;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
+}
+
 .button:hover {
-  background-color: #0057b3;
+  transform: scale(1.08);
 }
 
 .button.active {
-  background-color: #0056b3;
-  color: white;
+  background: linear-gradient(45deg, #0a6f34, #1b9549);
 }
 
 #cars-container {
@@ -95,6 +115,14 @@ body {
 }
 
 /* WOLKEN-STYLES */
+.wolken {
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  height: 100vh;
+  pointer-events: none;
+}
+
 .wolke {
   position: absolute;
   top: 50px;
@@ -127,15 +155,14 @@ body {
   }
 }
 
-
 @media (max-width: 768px) {
-
-  body {
-    background-color: #0056b3;
-  }
-
   .header-title {
     font-size: 10vw; /* Skalierung mit Viewport-Breite */
+    letter-spacing: 0;
+  }
+
+  .bottom-overlay {
+    height: 66vh;
   }
 
   #svg-container {
@@ -172,6 +199,4 @@ body {
     width: 200px;
     animation-delay: 12s;
   }
-
-
 }

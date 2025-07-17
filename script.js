@@ -3,16 +3,12 @@ const parkingStatus = document.getElementById("parking-status");
 const carsContainer = document.getElementById("cars-container");
 const svgContainer = document.getElementById("svg-container");
 
-const carImages = [
-  "assets/car1.svg",
-  "assets/car2.svg",
-  "assets/car3.svg"
-];
+const carImages = ["assets/car1.svg", "assets/car2.svg", "assets/car3.svg"];
 
-buttons.forEach(button => {
-  button.addEventListener('click', async () => {
-    buttons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
+buttons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    buttons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
 
     const parkingName = button.getAttribute("data-parking");
 
@@ -63,7 +59,6 @@ async function updateSVGByOccupancy(occupancy, freeSpaces) {
     svgContainer.innerHTML = "";
     return;
   }
-  
 
   if (occupancy <= 20) {
     svgFile = "assets/parkhaus_lte_20.svg";
@@ -81,7 +76,8 @@ function createAndAnimateCar() {
   img.src = carImages[Math.floor(Math.random() * carImages.length)];
   img.classList.add("car");
 
-  const startY = window.innerHeight * 0.5 + Math.random() * window.innerHeight * 0.5;
+  const startY =
+    window.innerHeight * 0.5 + Math.random() * window.innerHeight * 0.5;
   const direction = Math.random() > 0.5 ? 1 : -1;
   const startX = direction === 1 ? -100 : window.innerWidth + 100;
 
@@ -98,12 +94,16 @@ function createAndAnimateCar() {
   img.animate(
     [
       { transform: `translateX(0) scaleX(${direction})` },
-      { transform: `translateX(${direction * travelDistance}px) scaleX(${direction})` }
+      {
+        transform: `translateX(${
+          direction * travelDistance
+        }px) scaleX(${direction})`,
+      },
     ],
     {
       duration,
       easing: "linear",
-      fill: "forwards"
+      fill: "forwards",
     }
   );
 
@@ -127,7 +127,9 @@ async function updateSVG(filePath, textContent = "", zahlContent = "") {
 
     if (textElement) {
       textElement.textContent = textContent;
-      zahlElement.textContent = zahlContent
+    }
+    if (zahlElement) {
+      zahlElement.textContent = zahlContent;
     }
   } catch (error) {
     console.error("Fehler beim Laden des SVG:", error);

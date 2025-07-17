@@ -8,7 +8,7 @@
       }
 
       .cls-1, .cls-2 {
-        stroke: #b3b3b3;
+        stroke: #adb2c1;
         stroke-miterlimit: 10;
       }
 
@@ -26,11 +26,11 @@
       }
 
       .cls-6 {
-        fill: #b3b3b3;
+        fill: #adb2c1;
       }
 
       .cls-2 {
-        fill: #ccc;
+        fill: #dcdfe6;
         stroke-width: 5px;
       }
 
@@ -82,20 +82,13 @@
     <rect class="cls-6" x="522.88" y="71.29" width="8.87" height="34.83"/>
     <rect class="cls-6" x="100.82" y="71.29" width="8.87" height="34.83"/>
   </g>
- <text id="Zahl"
+  <text id="Text"
       x="320"
       y="50"
       font-size="40"
       text-anchor="middle"
       fill="#000000ff"
-      font-family="Funnel Display, sans-serif">
-</text>
-<text id="Text"
-      x="320"
-      y="50"
-      font-size="40"
-      text-anchor="middle"
-      fill="#000000ff"
-      font-family="Funnel Display, sans-serif">
-</text>
+      font-family="'Overpass', sans-serif"
+      font-weight="bold">
+  </text>
 </svg>
